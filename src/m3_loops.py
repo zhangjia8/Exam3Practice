@@ -229,13 +229,13 @@ def practice_problem3(start, n, threshold):
     ####################################################################
     s = []
     count = 0
-    for k in range(999999999):
-        if count < n:
-            if math.sin(start + k) + math.cos(start + k) > threshold:
-                s += [start + k]
-                count += 1
-        else:
-            return s
+    k = 0
+    while count < n:
+        if math.sin(start + k) + math.cos(start + k) > threshold:
+            s += [start + k]
+            count += 1
+        k += 1
+    return s
 
 
 # ----------------------------------------------------------------------
